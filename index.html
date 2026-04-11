@@ -4,71 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inversiones E&L</title>
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0a1f44;
+      background: #0a1f44;
       color: white;
     }
 
     header {
-      background: linear-gradient(90deg, #0a1f44, #0d2d6c);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 3px solid gold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #0a1f44;
+      border-bottom: 2px solid gold;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 50px;
     }
 
     header h1 {
-      margin: 0;
       color: gold;
-      font-size: 32px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: #0d2d6c;
-      padding: 10px;
+      font-size: 24px;
     }
 
     nav a {
-      color: gold;
+      margin: 0 15px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
     nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: url('https://images.unsplash.com/photo-1565372910027-63c1b1bcb5f2') no-repeat center/cover;
-    }
-
-    .hero h2 {
-      font-size: 40px;
       color: gold;
     }
 
-    .section {
-      padding: 50px 20px;
-      text-align: center;
+    .hero {
+      padding: 80px 40px;
+      background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.9)), url('https://images.unsplash.com/photo-1565372910027-63c1b1bcb5f2');
+      background-size: cover;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+    }
+
+    .hero span {
+      color: gold;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: gold;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      padding: 40px;
     }
 
     .card {
-      background-color: #0d2d6c;
+      background: #0d2d6c;
       padding: 20px;
       border-radius: 10px;
+      text-align: center;
       border: 1px solid gold;
     }
 
@@ -76,66 +92,84 @@
       color: gold;
     }
 
-    .logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
+    .about {
+      padding: 40px;
+    }
+
+    .about h2 {
+      color: gold;
+    }
 
     footer {
-      background-color: #0a1f44;
       text-align: center;
-      padding: 15px;
-      border-top: 2px solid gold;
+      padding: 20px;
+      border-top: 1px solid gold;
     }
+
+    /* WhatsApp */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
   </style>
 </head>
+
 <body>
 
 <header>
-  <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
-  <img src="https://lh3.googleusercontent.com/a/ACg8ocK8I0JIxi3-ErjzOq-QDjUpkE_goCajESNjnleDnyPhDXv1zzA=s792-c-no" alt="Logo Inversiones E&L" class="logo">
-  <h1>Inversiones E&L</h1>
-  <p>Tu mejor aliado en inversiones seguras</p>
+  <div class="logo-container">
+    <img src="logo.png" class="logo">
+    <h1>Inversiones E&L</h1>
+  </div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
 </header>
 
-<nav>
-  <a href="#">Inicio</a>
-  <a href="#servicios">Servicios</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
 <section class="hero">
-  <h2>Invierte con confianza</h2>
-  <p>Haz crecer tu dinero con expertos</p>
+  <h2>CREA TU <span>FUTURO FINANCIERO</span></h2>
+  <p>INVIERTE CON CONFIANZA</p>
+  <button class="btn">Descubre Más</button>
 </section>
 
-<section id="servicios" class="section">
-  <h2>Servicios</h2>
-  <div class="services">
-    <div class="card">
-     <img src="https://png.pngtree.com/png-vector/20200311/ourlarge/pngtree-financial-consultants-sit-and-stand-on-big-phones-successful-investor-or-png-image_2156078.jpg" width="80">
-      <h3>Asesoría Financiera</h3>
-      <p>Te ayudamos a tomar las mejores decisiones de inversión.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.freepik.com/vector-premium/mano-dinero-moneda-tarjeta-credito-aislado_24877-43989.jpg" width="80">
-      <h3>Convierte tu tarjeta de credito a efectivo</h3>
-      <p>Opciones seguras y rentables adaptadas a ti.</p>
-    </div>
-    <div class="card">
-      <img src=" https://cdn-icons-png.flaticon.com/512/1312/1312307.png " width="80">
-      <h3>Productos,Manualidades,detalles personalizados,postres entre otros</h3>
-      <p>Analizamos el mercado para maximizar tus ganancias.</p>
-    </div>
+<section class="services">
+  <div class="card">
+    <h3>Asesoría Profesional</h3>
+    <p>Consultoría experta para tus inversiones</p>
+  </div>
+
+  <div class="card">
+    <h3>Altos Rendimientos</h3>
+    <p>Obtén grandes beneficios</p>
+  </div>
+
+  <div class="card">
+    <h3>Seguridad</h3>
+    <p>Inversiones seguras y confiables</p>
   </div>
 </section>
 
-<section id="nosotros" class="section">
+<section class="about">
   <h2>Sobre Nosotros</h2>
-  <p>En Inversiones E&L contamos con un equipo profesional dedicado a hacer crecer tu capital con estrategias inteligentes.</p>
-</section>
-
+  <p>Somos expertos en inversiones comprometidos con tu crecimiento financiero.</p>
+  <button class="btn">Leer Más</button>
 <section id="contacto" class="section">
   <h2>Contacto</h2>
   
@@ -143,48 +177,11 @@
   
   <p>📱 WhatsApp: 971612535</p>
 </section>
-
 <footer>
-  <p>© 2026 Inversiones E&L - Todos los derechos reservados</p>
+  <p>© 2026 Inversiones E&L</p>
 </footer>
 
-
-<!-- Botón de WhatsApp PRO -->
 <a href="https://wa.me/51971612535?text=Hola,%20quiero%20información%20sobre%20Inversiones%20E%26L" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
-    <path d="M19.11 17.41c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.18-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.34.98 2.64 1.12 2.82.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-    <path d="M26.7 5.3A13.86 13.86 0 0016.03 1C8.83 1 3 6.83 3 14.03c0 2.47.66 4.78 1.81 6.78L3 31l10.43-1.78a13.95 13.95 0 006.6 1.68h.01c7.2 0 13.03-5.83 13.03-13.03 0-3.48-1.36-6.75-3.37-9.57zM16.04 28.3h-.01a11.9 11.9 0 01-6.05-1.66l-.43-.26-6.19 1.05 1.1-6.03-.28-.44a11.86 11.86 0 01-1.84-6.33c0-6.56 5.34-11.9 11.9-11.9 3.18 0 6.17 1.24 8.42 3.49a11.82 11.82 0 013.48 8.41c0 6.56-5.34 11.9-11.9 11.9z"/>
-  </svg>
-</a>
-
-<style>
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
-  z-index: 1000;
-  animation: pulse 1.8s infinite;
-}
-
-.whatsapp-btn:hover {
-  background-color: #1ebe5d;
-  transform: scale(1.1);
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-</style>
 
 </body>
 </html>
